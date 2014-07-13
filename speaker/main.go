@@ -28,6 +28,9 @@ func (c Cat) Speak() string {
 
 // This function taks a Speaker, s, as an argument and prefixes it's output
 // from calling `Speak()`
+//
+// This is why interfaces are cool - Anything can define a `Speak` method, and
+// therefore can be passed to `animalSays`.
 func animalSays(s Speaker) string {
 	spoke := s.Speak()
 	return "this animal says " + spoke

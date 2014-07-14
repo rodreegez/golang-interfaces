@@ -9,9 +9,7 @@ type inner struct {
 
 // This is the outer struct...
 type outer1 struct {
-	// ...and here's the inner struct, embeded anoymously
 	inner
-	// and a per-struct attribute
 	name string
 }
 
@@ -22,8 +20,8 @@ type outer2 struct {
 }
 
 func main() {
-	o1 := outer1{inner{1}, "1"}
-	o2 := outer2{inner{2}, "2"}
-	fmt.Println(o1)
-	fmt.Println(o2)
+	o1 := outer1{inner{1}, "one"}
+	o2 := outer2{inner{2}, "two"}
+	fmt.Println(o1.val)
+	fmt.Println(o2.name)
 }
